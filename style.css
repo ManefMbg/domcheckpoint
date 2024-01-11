@@ -81,6 +81,10 @@ html, body {
     font-size: 8em;
 }
 
+.fa-heart{
+    margin-right: 20px;
+}
+
 .content-section {
     margin: 1em;
 }

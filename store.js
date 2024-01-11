@@ -26,6 +26,7 @@ function ready() {
   document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
+// Calling the purchase button function + alert
 function purchaseClicked() {
   alert('Thank you for your purchase')
   var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -34,7 +35,7 @@ function purchaseClicked() {
   }
   updateCartTotal()
 }
-
+// Calling the remove button function
 function removeCartItem(event) {
   var buttonClicked = event.target
   buttonClicked.parentElement.parentElement.remove()
@@ -101,3 +102,15 @@ function updateCartTotal() {
   total = Math.round(total * 100) / 100
   document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
+
+const like = Array.from(document.getElementsByClassName('fa-heart'))
+
+
+for (const btnLike of like) {
+  btnLike.addEventListener('click', function(){
+    if(btnLike.style.color === 'red'){
+        btnLike.style.color = 'black'
+    } else {
+      btnLike.style.color = 'red'
+    }
+})}
